@@ -7,7 +7,7 @@ import { Product } from '../interface/product.interface';
   providedIn: 'root',
 })
 export class ProductsDataService {
-  private url = 'http://localhost:3000/getproducts';
+  private url = 'https://ecommerce-8mbj.onrender.com/api/getproduct';
 
   constructor(private http: HttpClient) {}
 
