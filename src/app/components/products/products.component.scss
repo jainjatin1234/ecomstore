@@ -3098,6 +3098,10 @@ footer {
    * #PRODUCT
    */
 
+   .color{
+    color: red;
+   }
+
   .product-featured .showcase > div { min-width: -webkit-calc(50% - 10px); min-width: calc(50% - 10px); }
 
   .product-featured .display-number { --fs-5: 1.125rem; }
@@ -3207,4 +3211,10 @@ footer {
     max-width: 460px;
   }
 
+}
+
+
+.color
+{
+  color: red;
 }
