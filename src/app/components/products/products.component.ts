@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProductsDataService } from '../../services/products-data.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { DealService } from '../../services/deal.service';
 @Component({
   selector: 'app-products',
   standalone: true,
@@ -11,11 +12,16 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class ProductsComponent {
   products:any;
-  constructor(private productData:ProductsDataService)
+  deals:any;
+  constructor(private productData:ProductsDataService,private dealData:DealService)
   {
     productData.getproducts().subscribe((data)=>{
       console.log(data);
       this.products=data;
+    }),
+    dealData.getdeals().subscribe((data)=>{
+      console.log(data);
+      this.deals=data;
     })
   }
 
