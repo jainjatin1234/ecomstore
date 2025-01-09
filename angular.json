@@ -81,15 +81,7 @@
           "defaultConfiguration": "development"
         },
 
-        "prerender": {
-  "builder": "@angular-devkit/build-angular:prerender",
-  "options": {
-    "routes": [
-      "/",
-      "/productdetails/:id"
-    ]
-  }
-},
+       
 
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n"

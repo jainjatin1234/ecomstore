@@ -14,13 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
   selector: 'app-root',
   imports: [
     RouterModule,
-    HeaderComponent,
-    BannerComponent,
-    CategoryComponent,
-    ProductsComponent,
-    BlogComponent,
-    HomeComponent,
-    FooterComponent
+   
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
