@@ -33,7 +33,7 @@ export class ProductsDataService {
   }
 
   getproductdetails(id:string){
-    return this.http.get<Product[]>(`http://localhost:3000/getproductdetails/${id}`);
+    return this.http.get<Product[]>(`https://ecomstorebackend.onrender.com/getproductdetails/${id}`);
   }
 
 
