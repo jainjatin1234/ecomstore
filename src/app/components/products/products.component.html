@@ -1,4 +1,5 @@
 
+  <!-- <router-outlet></router-outlet> -->
 <div class="product-container">
 
   <div class="container">
@@ -675,7 +676,10 @@
 
         <div class="showcase-wrapper has-scrollbar">
 
+
           <div class="showcase-container" *ngFor="let deal of deals">
+
+
 
             <div class="showcase">
 
@@ -766,7 +770,7 @@
 
           </div>
 
-      
+
 
         </div>
 
@@ -791,6 +795,8 @@
           </ul> -->
 
           <div class="showcase" *ngFor="let product of products">
+          <a routerLink="productdetails/{{product.id}}">
+
 
             <div class="showcase-banner">
 
@@ -822,6 +828,9 @@
               </div>
 
             </div>
+          </a>
+
+
 
             <div class="showcase-content">
 
@@ -1010,3 +1019,6 @@
   </div>
 
 </div>
+
+
+

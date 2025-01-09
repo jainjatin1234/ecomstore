@@ -21,6 +21,7 @@ export class ProductsDataService {
   // Transform the API response to match the Product interface
   private processResponse(response: any): Product[] {
     return response.data.map((product: any) => ({
+      id:product._id,
       name: product.name,
       title:product.title,
       // imageUrl: product.imageUrl,
@@ -30,4 +31,11 @@ export class ProductsDataService {
       stock: product.stock
     }));
   }
+
+  getproductdetails(id:string){
+    return this.http.get<Product[]>(`http://localhost:3000/getproductdetails/${id}`);
+  }
+
+
+
 }

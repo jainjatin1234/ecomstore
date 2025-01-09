@@ -3,10 +3,12 @@ import { ProductsDataService } from '../../services/products-data.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { DealService } from '../../services/deal.service';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { ProductdetailsComponent } from '../productdetails/productdetails/productdetails.component';
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule,HttpClientModule],
+  imports: [CommonModule,HttpClientModule,RouterModule,RouterLink],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'], // Corrected from `styleUrl` to `styleUrls`
 })
@@ -19,6 +21,7 @@ export class ProductsComponent {
       console.log(data);
       this.products=data;
     }),
+    
     dealData.getdeals().subscribe((data)=>{
       console.log(data);
       this.deals=data;
