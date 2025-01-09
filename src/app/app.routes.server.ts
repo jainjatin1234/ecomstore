@@ -3,7 +3,7 @@ import { RenderMode, ServerRoute } from '@angular/ssr';
 // Simulate fetching dynamic route parameters (e.g., product IDs)
 async function fetchProductIds(): Promise<string[]> {
   // Replace with your actual logic, e.g., API call or database query
-  return ['1', '2', '3']; // Example product IDs
+  return []; // Example product IDs
 }
 
 // Define the `getPrerenderParams` function

@@ -13,6 +13,6 @@ export const routes: Routes = [
 
   "path":"productdetails/:id",
   component:ProductdetailsComponent,
-  data: { renderMode: 'ssr' }, 
+
 }
 ];
