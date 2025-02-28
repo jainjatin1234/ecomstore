@@ -12,3 +12,4 @@ export interface Product
   dprice:Number;
   stock:Number;
 }
+

@@ -99,6 +99,19 @@
    <span class="count">0</span>
         </button>
 
+        <div [ngSwitch]="menuType">
+          <!-- Case for logged-in user -->
+          <ul *ngSwitchCase="'user'">
+            <li>{{ userName }}</li>
+            <li><a (click)="userLogout()">Logout</a></li>
+          </ul>
+
+          <!-- Default Case for guest -->
+          <ul *ngSwitchDefault>
+            <li><a routerLink="/user-auth">Login</a></li>
+          </ul>
+        </div>
+
         <button class="action-btn">
           <!-- <ion-icon name="bag-handle-outline"></ion-icon> -->
           <i class="fa fa-shopping-cart mr-1"></i>
